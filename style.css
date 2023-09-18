@@ -16,69 +16,69 @@ body, html {
             float: left;
             width: 350px;
             height: 200px;
+            margin-top: 30px;
         }
 
         nav {
-            position: fixed; /* Add this property */
-            top: 0; /* Add this property */
-            width: 100%; /* Add this property */
-            margin-left: 120px;
-        }
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(to bottom, #333333, #222222);
+}
 
+aside {
+    float: left;
+    width: 20%;
+    padding: 3%;
+    height: 100vh;
+}
 
+ul {
+    list-style: none;
+    padding: 0;
+}
 
-        aside {
-            float: left;
-            width: 20%;
-            padding: 3%;
-            height: 100vh;
-        }
+li {
+    font-size: 20px;
+}
 
-        ul {
-            list-style: none;
-            padding: 0;
-        }
+.gain-center {
+    transition: 0.3s ease;
+    text-align: center;
+}
 
-        li {
-            font-size: 20px;
-        }
+.gain-center:hover {
+    transform: scale(1.2);
+    color: red;
+}
 
-        .gain-center {
-            transition: 1s;
-            text-align: center;
-        }
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
 
-        .gain-center:hover {
-            transform: scale(1.2);
-            color: red;
-        }
+nav li {
+    margin: 0 15px;
+}
 
-        nav ul {
-            display: flex;
-            justify-content: center;
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: linear-gradient(to bottom, #333333, #222222);
+    transition: background-color 0.3s ease, transform 0.3s ease, font-weight 0.3s ease;
+}
 
-        }
-
-        nav li {
-            margin: 50px;
-
-        }
-
-        nav a {
-            text-decoration: none;
-            color: white;
-            font-size: 28px;
-            padding: 10px 15px;
-            border-radius: 5px;
-            background-color: #333333;
-            transition: background-color 0.3s ease;
-            margin-left: 85px;
-        }
-
-        nav a:hover {
-            background-color: grey;
-            color: red;
-        }
+nav a:hover {
+    background: linear-gradient(to bottom, #333333, #444444);
+    color: red;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
         @-webkit-keyframes rainbow {
             0% {
@@ -93,35 +93,40 @@ body, html {
             }
 
 
-        .about {
+       /* About section */
+.about {
     background-image: url('photo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    padding: 50px;
 }
 
-        .about p {
-        color: white;
-        background: rgba(0, 0, 0, 0.2)
+.about p {
+    color: white;
+    font-size: 24px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
 }
 
 
 
       @-webkit-keyframes rain {
   0% {
-    background: url('garni.jpg') no-repeat;
+    background: url('') no-repeat;
     background-size: cover;
   }
   14% {
-    background: url('Gyumri.jpg') no-repeat;
+    background: url('') no-repeat;
     background-size: cover;
   }
   /* Add the remaining keyframes here */
 }
 
 .tours {
-  background-image: url('garni.jpg');
+  background-image: url('');
   background-size: cover;
   animation: rain 15s infinite; /* Apply the 'rain' animation for 15 seconds, infinitely */
+  padding: 50px;
 
 }
 
@@ -129,8 +134,10 @@ body, html {
         .contacts {
     background-image: url('photo2.jpg');
     background-repeat: no-repeat;
+    background-size: cover;
     width: 1300px;
     height: 400px;
+    padding: 50px;
 
 
 }
@@ -172,6 +179,7 @@ body, ul {
 
 .language-selector li {
     margin-left: 10px;
+    margin-top: 50px;
 }
 
 .language-selector li:first-child {
@@ -194,7 +202,11 @@ body, ul {
     color: #fff;
 }
 
+.flag-icon{
+width: 25px;
+height: 25px;
 
+}
 
 
 .contacts img {
@@ -224,3 +236,123 @@ body, ul {
       margin-top: -40px;
 
     }
+
+
+
+/* Style for the main container */
+.tours {
+  text-align: center;
+  padding: 60px;
+  background: linear-gradient(45deg, #f8f8f8, #eaeaea);
+  border-radius: 20px;
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the title */
+.title {
+  margin: 30px 0;
+  font-size: 40px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the blocks container */
+.blocks-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* Style for individual blocks */
+.block1,
+.block2,
+.block3,
+.block4 {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s ease;
+}
+
+.block1 img,
+.block2 img,
+.block3 img,
+.block4 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.block1:hover,
+.block2:hover,
+.block3:hover,
+.block4:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Style for paragraph text */
+.tours p {
+  font-size: 20px;
+  text-align: left;
+  margin-top: -15px;
+  color: #777;
+  line-height: 1.8;
+}
+
+/* Optional: Style for the HR element */
+.tours hr {
+  margin: 30px 0;
+  border: none;
+  border-top: 2px solid #ccc;
+}
+
+
+
+
+
+
+    @media (max-width: 768px) {
+  .blocks-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .block1,
+  .block2,
+  .block3,
+  .block4 {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.3s ease;
+  }
+
+  .block1:hover,
+  .block2:hover,
+  .block3:hover,
+  .block4:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .tours p {
+    font-size: 14px;
+    text-align: left;
+    margin-top: -5px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}
